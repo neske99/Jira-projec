@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Project.Domain.Entities.Common;
+using Project.Domain.Entities.User;
 
 public class UserTeamConfiguration : IEntityTypeConfiguration<UserTeam>
 {
