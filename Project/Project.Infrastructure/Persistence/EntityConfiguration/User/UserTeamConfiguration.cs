@@ -7,5 +7,12 @@ public class UserTeamConfiguration : IEntityTypeConfiguration<UserTeam>
   public void Configure(EntityTypeBuilder<UserTeam> builder)
   {
     builder.ToTable("UserTeam");
+    builder.HasIndex(ut => ut.Id);
+
+    builder.HasOne<User>().WithMany()
+      .HasForeignKey(ut => ut.UserId);
+
+    builder.HasOne<Team>().WithMany()
+      .HasForeignKey(ut => ut.TeamId);
   }
 }

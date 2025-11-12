@@ -7,5 +7,6 @@ public class TeamConfiguration : IEntityTypeConfiguration<Team>
   public void Configure(EntityTypeBuilder<Team> builder)
   {
     builder.ToTable("Team");
+    builder.HasIndex(t => t.Id);
   }
 }
