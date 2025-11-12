@@ -1,5 +1,0 @@
-/home/neske99/Desktop/Jira-project/Project/Project.Infrastructure/obj/Debug/net8.0/Project.Infrastructure.csproj.AssemblyReference.cache
-/home/neske99/Desktop/Jira-project/Project/Project.Infrastructure/obj/Debug/net8.0/Project.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
-/home/neske99/Desktop/Jira-project/Project/Project.Infrastructure/obj/Debug/net8.0/Project.Infrastructure.AssemblyInfoInputs.cache
-/home/neske99/Desktop/Jira-project/Project/Project.Infrastructure/obj/Debug/net8.0/Project.Infrastructure.AssemblyInfo.cs
-/home/neske99/Desktop/Jira-project/Project/Project.Infrastructure/obj/Debug/net8.0/Project.Infrastructure.csproj.CoreCompileInputs.cache
