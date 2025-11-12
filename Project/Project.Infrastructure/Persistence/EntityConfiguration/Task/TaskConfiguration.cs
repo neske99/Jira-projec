@@ -6,6 +6,12 @@ public class TaskConfiguration : IEntityTypeConfiguration<Project.Domain.Entitie
   public void Configure(EntityTypeBuilder<Project.Domain.Entities.Task.Task> builder)
   {
     builder.ToTable("Task");
+    builder.HasIndex(t => t.Id);
 
+    builder.HasOne<Project.Domain.Entities.Task.TaskType>().WithMany()
+      .HasForeignKey(t => t.TaskTypeId);
+
+    builder.HasOne<Project.Domain.Entities.Task.TaskStatus>().WithMany()
+      .HasForeignKey(t => t.TaskStatusId);
   }
 }

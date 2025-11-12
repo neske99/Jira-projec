@@ -9,5 +9,6 @@ public class TaskTypeConfiguration : IEntityTypeConfiguration<TaskType>
   public void Configure(EntityTypeBuilder<TaskType> builder)
   {
     builder.ToTable("TaskType");
+    builder.HasIndex(tt => tt.Id);
   }
 }
