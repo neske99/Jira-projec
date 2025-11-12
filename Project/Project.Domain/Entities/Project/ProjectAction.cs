@@ -7,6 +7,5 @@ public class ProjectAction:EnttitySoftDelete
   public int ProjectStatusIdFrom{ get; set; }
   public int ProjectStatusIdTo{ get; set; }
   public int ProjectTypeId{ get; set; }
-  public int RoleId{ get; set; }
 
 }

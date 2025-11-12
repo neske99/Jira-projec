@@ -9,5 +9,15 @@ public class ProjectActionConfiguration:IEntityTypeConfiguration<ProjectAction>
   public void Configure(EntityTypeBuilder<ProjectAction> builder)
   {
     builder.ToTable("ProjectAction");
+    builder.HasIndex(pa => pa.Id);
+
+    builder.HasOne<ProjectType>().WithMany()
+      .HasForeignKey(pa => pa.ProjectTypeId);
+
+    builder.HasOne<ProjectStatus>().WithMany()
+      .HasForeignKey(pa => pa.ProjectStatusIdFrom);
+
+    builder.HasOne<ProjectStatus>().WithMany()
+      .HasForeignKey(pa => pa.ProjectStatusIdTo);
   }
 }

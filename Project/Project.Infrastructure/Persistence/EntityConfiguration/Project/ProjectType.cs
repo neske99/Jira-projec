@@ -9,5 +9,6 @@ public class ProjectTypeConfiguration : IEntityTypeConfiguration<ProjectType>
   public void Configure(EntityTypeBuilder<ProjectType> builder)
   {
     builder.ToTable("ProjectType");
+    builder.HasIndex(pt => pt.Id);
   }
 }

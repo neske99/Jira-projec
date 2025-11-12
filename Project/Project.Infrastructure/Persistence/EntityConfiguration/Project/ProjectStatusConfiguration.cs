@@ -9,5 +9,9 @@ public class ProjectStatusConfiguration:IEntityTypeConfiguration<ProjectStatus>
   public void Configure(EntityTypeBuilder<ProjectStatus> builder)
   {
     builder.ToTable("ProjectStatus");
+    builder.HasIndex(ps => ps.Id);
+
+    builder.HasOne<ProjectType>().WithMany()
+      .HasForeignKey(ps => ps.ProjecTypeId);
   }
 }
