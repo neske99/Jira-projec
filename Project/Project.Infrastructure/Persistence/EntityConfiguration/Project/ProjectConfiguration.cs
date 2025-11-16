@@ -9,11 +9,12 @@ using Project.Domain.Entities.Project;
       builder.ToTable("Project");
       builder.HasIndex(p => p.Id);
 
-      builder.HasOne<ProjectType>()
+      builder.HasOne(p=>p.ProjectType)
       .WithMany()
       .HasForeignKey(p => p.ProjectTypeId);
 
-      builder.HasOne<ProjectStatus>().WithMany()
+      builder.HasOne(p=>p.ProjectStatus)
+      .WithMany()
       .HasForeignKey(p => p.ProjectStatusId);
     }
   }
