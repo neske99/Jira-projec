@@ -1,0 +1,15 @@
+services:
+  postgresdb:
+    container_name: postgresdb
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin1234
+      - POSTGRES_DB=ProjectDB
+    volumes:
+      - postgres_data:\var\lib\postgres\data
+
+volumes:
+  postgres_data:

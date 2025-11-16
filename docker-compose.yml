@@ -1,0 +1,4 @@
+services:
+
+  postgresdb:
+    image: postgres
