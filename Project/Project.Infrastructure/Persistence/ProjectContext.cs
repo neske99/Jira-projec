@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Project.Domain.Entities.Project;
 using Project.Domain.Entities.Task;
+using Project.Domain.Entities.User;
 
 public class ProjectContext:DbContext
 {
@@ -12,6 +13,7 @@ public class ProjectContext:DbContext
   DbSet<ProjectActoinRole> ProjectActionRoles{ get; set; }
   DbSet<ProjectStatus> ProjectStatuses{ get; set; }
   DbSet<ProjectType> ProjectTypes{ get; set; }
+  DbSet<ProjectTeam> ProjectTeams{ get; set; }
 
   #endregion
 
