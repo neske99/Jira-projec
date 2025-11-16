@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Project.Application.Contracts;
+using Project.Infrastructure.Persistence;
 
+namespace Project.Infrastructure.Repositories;
 public class ProductRepository : IProjectRepository
 {
   private readonly ProjectContext _context;

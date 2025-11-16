@@ -2,9 +2,13 @@ using Microsoft.EntityFrameworkCore;
 using Project.Domain.Entities.Project;
 using Project.Domain.Entities.Task;
 using Project.Domain.Entities.User;
+namespace Project.Infrastructure.Persistence;
 
 public class ProjectContext:DbContext
 {
+  public ProjectContext(DbContextOptions options) : base(options)
+  {
+  }
 
   #region Project
 
